@@ -211,7 +211,7 @@ describe("POST /enrollments", () => {
         const response = await server.post("/enrollments").set("Authorization", `Bearer ${token}`).send(body);
 
         expect(response.status).toBe(httpStatus.BAD_REQUEST);
-      });
+      }, 3000);
     });
   });
 });
